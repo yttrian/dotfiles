@@ -1,10 +1,10 @@
 - clean: ['~']
 
 - link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-    ~/.vimrc: vimrc
+    ~/.profile: loose/profile
+    ~/.bashrc: loose/bashrc
+    ~/.bash_logout: loose/bash_logout
+    ~/.vimrc: loose/vimrc
     ~/.config/fish:
       create: true
       glob: true
