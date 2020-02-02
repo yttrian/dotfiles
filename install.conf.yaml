@@ -18,6 +18,10 @@
       force: true
       glob: true
       path: omf/*
+    ~/.config/nvim:
+      force: true
+      glob: true
+      path: nvim/*
 
 - shell:
   - [apt install -y fish curl, Installing fish]
