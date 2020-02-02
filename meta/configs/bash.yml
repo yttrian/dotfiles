@@ -1,0 +1,3 @@
+- link:
+    ~/.bashrc: loose/bashrc
+    ~/.bash_logout: loose/bash_logout
