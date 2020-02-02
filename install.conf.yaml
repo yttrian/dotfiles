@@ -6,4 +6,8 @@
     ~/.bash_logout: bash_logout
     ~/.vimrc: vimrc
 
-
+- shell:
+  - apt install fish curl
+  - curl -L https://get.oh-my.fish | fish
+  - omf install bobthefish
+  - chsh -s $(which fish)
