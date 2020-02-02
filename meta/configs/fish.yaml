@@ -1,12 +1,6 @@
 - link:
-    ~/.config/fish:
-      force: true
-      glob: true
-      path: fish/*
-    ~/.config/omf:
-      force: true
-      glob: true
-      path: omf/*
+    ~/.config/fish: fish
+    ~/.config/omf: omf
 
 - shell:
   - [apt install -y fish curl, Installing fish]
