@@ -1,0 +1,1 @@
+set theme_title_display_user yes
