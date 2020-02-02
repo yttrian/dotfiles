@@ -7,22 +7,21 @@
     ~/.vimrc: loose/vimrc
     ~/.config/fish:
       create: true
+      force: true
       glob: true
       path: fish/*
     ~/.config/omf:
       create: true
+      force: true
       glob: true
       path: omf/*
 
 - shell:
-  - 
-    command: >
-      sudo apt install -y fish curl &&
-      curl -L https://get.oh-my.fish | fish &&
-      omf install &&
-      chsh -s $(which fish) $USER
-    description: Setting up fish
-  - [sudo apt install -y neovim, Installing neovim]
-  - [sudo apt install -y tmux, Installing tmux]
-  - [sudo apt install -y neofetch, Installing neofetch]
-    
+  - [apt install -y fish curl, Installing fish]
+  - [chsh -s $(which fish) $USER, Setting fish as default shell] 
+  - [curl -L 'https://get.oh-my.fish' | fish, Setting up omf]
+  - [omf install, Installing omf packages]
+  - [apt install -y neovim, Installing neovim]
+  - [apt install -y tmux, Installing tmux]
+  - [apt install -y neofetch, Installing neofetch]
+
