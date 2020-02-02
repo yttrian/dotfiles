@@ -7,7 +7,13 @@
     ~/.vimrc: vimrc
 
 - shell:
-  - apt install fish curl
-  - curl -L https://get.oh-my.fish | fish
-  - omf install bobthefish
-  - chsh -s $(which fish)
+  - 
+    command: >
+      sudo apt install -y fish curl &&
+      curl -L https://get.oh-my.fish | fish &&
+      omf install bobthefish &&
+      sudo chsh -s $(which fish)
+    description: Setting up fish
+  - 
+    command: sudo apt install -y neovim tmux neofetch
+    description: Installing useful tools
