@@ -4,4 +4,5 @@ nvim
 profile
 tmux
 vim
+dos2unix
 fish
