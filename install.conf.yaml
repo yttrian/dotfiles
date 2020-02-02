@@ -1,3 +1,8 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - clean: ['~']
 
 - link:
@@ -6,12 +11,10 @@
     ~/.bash_logout: loose/bash_logout
     ~/.vimrc: loose/vimrc
     ~/.config/fish:
-      create: true
       force: true
       glob: true
       path: fish/*
     ~/.config/omf:
-      create: true
       force: true
       glob: true
       path: omf/*
