@@ -1,0 +1,2 @@
+# ignore fish_prompt because it is managed my omf
+fish_prompt.fish

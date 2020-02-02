@@ -5,15 +5,24 @@
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
     ~/.vimrc: vimrc
+    ~/.config/fish:
+      create: true
+      glob: true
+      path: fish/*
+    ~/.config/omf:
+      create: true
+      glob: true
+      path: omf/*
 
 - shell:
   - 
     command: >
       sudo apt install -y fish curl &&
       curl -L https://get.oh-my.fish | fish &&
-      omf install bobthefish &&
-      sudo chsh -s $(which fish)
+      omf install &&
+      chsh -s $(which fish) $USER
     description: Setting up fish
-  - 
-    command: sudo apt install -y neovim tmux neofetch
-    description: Installing useful tools
+  - [sudo apt install -y neovim, Installing neovim]
+  - [sudo apt install -y tmux, Installing tmux]
+  - [sudo apt install -y neofetch, Installing neofetch]
+    
