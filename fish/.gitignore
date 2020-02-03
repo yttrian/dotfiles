@@ -1,5 +1,7 @@
-# managed by omf
-fish_prompt.fish
+# managed by fisher and bobthefish
+*bobthefish*.fish
+fish_*.fish
+fisher.fish
 
 # automatically generated 
 fishd.*
