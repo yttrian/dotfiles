@@ -1,10 +1,10 @@
-bash
+bash_config
 dos2unix_install
-fish
+fish_config
 fish_install
 neofetch_install
-nvim
+nvim_config
 nvim_install
-profile
+profile_config
 tmux_install
-vim
+vim_config
