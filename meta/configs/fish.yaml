@@ -1,6 +1,2 @@
 - link:
     ~/.config/fish: fish
-
-- shell:
-  - [apt install -y fish curl, Installing fish]
-  - [chsh -s $(which fish) $USER, Setting fish as default shell]

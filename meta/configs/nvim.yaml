@@ -1,8 +1,2 @@
 - link:
-    ~/.config/nvim:
-      force: true
-      glob: true
-      path: nvim/*
-
-- shell:
-  - [apt install -y neovim, Installing neovim]
+    ~/.config/nvim: nvim

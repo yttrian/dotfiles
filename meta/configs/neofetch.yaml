@@ -1,2 +1,0 @@
-- shell:
-  - [apt install -y neofetch, Installing neofetch]

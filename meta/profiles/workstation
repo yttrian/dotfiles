@@ -1,8 +1,10 @@
 bash
-neofetch
-nvim
-profile
-tmux
-vim
-dos2unix
+dos2unix_install
 fish
+fish_install
+neofetch_install
+nvim
+nvim_install
+profile
+tmux_install
+vim
