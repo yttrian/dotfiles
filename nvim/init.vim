@@ -1,5 +1,5 @@
 syntax enable		" Make stuff pretty
-"colorscheme monokai	" It is the best, yours is inferior
+colorscheme monokai	" It is the best, yours is inferior
 
 set number			" Number the lines, but not like a weirdo
 

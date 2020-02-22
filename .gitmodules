@@ -1,3 +1,9 @@
 [submodule "dotbot"]
 	path = meta/dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "nvim/pack/vim-airline"]
+	path = nvim/pack/ian/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "nvim/pack/ian/start/monokai"]
+	path = nvim/pack/ian/start/monokai
+	url = https://github.com/crusoexia/vim-monokai.git
