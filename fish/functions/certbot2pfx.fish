@@ -2,5 +2,5 @@
 function certbot2pfx
 	set base /etc/letsencrypt/live
 	set name $argv[1]
-	openssl pkcs12 -export -out certificate -inkey "$base/$name/privkey.pem" -in "$base/$name/fullchain.pem" -certfile "$base/$name/cert.pem" -export -out "$name.pfx"
+	openssl pkcs12 -export -out "$name.pfx" -inkey "$base/$name/privkey.pem" -in "$base/$name/cert.pem" -certfile "$base/$name/chain.pem"
 end
