@@ -1,2 +1,4 @@
 - link:
-    ~/.config/fish: fish
+    ~/.config/fish: 
+        path: fish
+        force: true
