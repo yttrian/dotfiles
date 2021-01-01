@@ -1,13 +1,19 @@
 # dotfile config
 ---
-profile:
+profiles:
   workstation:
-    files: &files
-      - .bash_logout
-      - .bashrc
-      - .profile
-      - .vimrc
-      - .config/fish
+    files:
+      bash: &bash
+        - .bash_logout
+        - .bashrc
+      profile: &profile
+        - .profile
+      vim:
+        - .vimrc
+      fish:
+        - .config/fish/functions
+        - .config/fish/config.fish
+        - .config/fish/fishfile
     packages:
       - fish
       - curl
@@ -15,10 +21,8 @@ profile:
       - tmux
       - dos2unix
     shell: fish
-    scripts:
-      fisher:
-        - curl https://git.io/fisher | source
-        - fisher
   server:
-    files: *files
+    files:
+      bash: *bash
+      profile: *profile
     shell: bash
