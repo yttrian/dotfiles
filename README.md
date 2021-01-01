@@ -1,58 +1,29 @@
 # dotfiles
 
-My dotfiles, once I add all the ones I need
+All of my dotfiles and packages.
 
-## Bikeshedding
+## Ian's (stupid) simple dotfile manager
 
-### Tabs vs Spaces
+All dotfile managers I have looked at are a confusing mess.
+They claim to be simple, but they aren't.
+I just want to edit a single large YAML file and be done.
+I do not want to write or edit a single shell script.
 
-I would like to end the tabs vs spaces debate once and for all.
+Their install scripts aren't the most intuitive either some times.
+Not all of them use `apt` or `apk`.
+Some oddly choose to use `npm` for some godforsaken reason.
+I personally prefer `pip` and if I *need* to use Node `pnpm`.
 
-You should use tabs. Everyone can customize their size visually within their preferred editor for their specific needs. The only exception is if an existing codebase or language does not allow it.
+This tool is not designed for you.
 
-The excuse that spaces are better because they can be used for alignment is wrong.
-You should not be aligning anything.
+This tool likely will not meet your goals.
 
-**Do** this
-```kotlin
-fun something (
-    thisIs,
-    the,
-    properWay
-) {
-    val myObject = SuperExciting(
-        anInput, anotherInput
-        yetAnotherInput, andMore
-    )
-}
-```
+This tool is opinionated.
 
-**Don't** do this
-```kotlin
-fun something (sureItsPretty,
-               butItIsNot,
-               Accessible) {
-    val myObject = SuperExciting(anInput, anotherInput
-                                 yetAnotherInput, andMore)
-}
-```
+# Goals
 
-### Comments
-
-Comments should always have a space after the start. Inline comments that share a line with code should have two spaces before the start. In this case spaces are *not* considered alignment, that concern stems from multiline code. Again, the only exception is if you need to follow an existing code base's standards, which should be using the official language standard (if it exists).
-
-**Do** this
-```kotlin
-val abc = 123  // this is a comment
-```
-
-**Don't** do this
-```kotlin
-val abc = 123 //this is a comment
-```
-
-### Emacs vs vim
-
-Neither, unless you have no choice, then whatever you prefer. I use IDEs whenever I can, but for some reason people find enjoying their conveniences an affront to their text editor choice.
-
-### 
+- [ ] Make installing packages simple
+- [ ] Don't use Git Submodules
+- [ ] Use Bitwarden to store secrets
+- [ ] Make work on Ubuntu, Alpine, and Termux (things I use!)
+- [ ] Maybe add Windows support?

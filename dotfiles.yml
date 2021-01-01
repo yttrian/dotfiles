@@ -1,0 +1,24 @@
+# dotfile config
+---
+profile:
+  workstation:
+    files: &files
+      - .bash_logout
+      - .bashrc
+      - .profile
+      - .vimrc
+      - .config/fish
+    packages:
+      - fish
+      - curl
+      - neofetch
+      - tmux
+      - dos2unix
+    shell: fish
+    scripts:
+      fisher:
+        - curl https://git.io/fisher | source
+        - fisher
+  server:
+    files: *files
+    shell: bash
