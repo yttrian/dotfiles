@@ -1,5 +1,0 @@
-- shell:
-  - [sudo apt install -y fish curl, Installing fish]
-  - [curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish, Installing fisher]
-  - [fish -c fisher, Installing fisher packages]
-  - [chsh -s $(which fish) $USER, Setting fish as default shell]
