@@ -1,28 +1,51 @@
 # dotfile config
+#
+# This file is used to express different profiles and how to install them.
+# It starts with a unique profile name like "workstation".
+# Nested underneath a profile is 4 sections: files, packages, shell, scripts
+#
+# files section
+# The files section defines the different files and folders to symlink.
+# The system will automatically determine if a file or folder is being linked.
+# For private files, :private can be added to the end of them (like .ssh/id_rsa:private)
+# which will then result in Bitwarden being used to secure store them outside of the repository.
+# You can use .gitignore to hide files in symlinked folders, and this can be paired with :private too.
+#
+# packages section
+# This section lists packages to install with the default package manager.
+# Ubuntu will use apt with sudo, Alpine will use apk, and Termux will use pkg.
+#
+# shell directive
+# This section simple defines the user preferred shell like fish or bash.
+# If fish, you do not need to define it in packages as it will be auto-installed.
+#
+# scripts section
+# Similar to files this consists of named sub-sections with a list of shell scripts to run.
+# Ideally this should not be needed as packages and shell sections should handle most things.
 ---
-profiles:
-  workstation:
-    files:
-      bash: &bash
-        - .bash_logout
-        - .bashrc
-      profile: &profile
-        - .profile
-      vim:
-        - .vimrc
-      fish:
-        - .config/fish/functions
-        - .config/fish/config.fish
-        - .config/fish/fishfile
-    packages:
-      - fish
-      - curl
-      - neofetch
-      - tmux
-      - dos2unix
-    shell: fish
-  server:
-    files:
-      bash: *bash
-      profile: *profile
-    shell: bash
+workstation:
+  files:
+    bash: &bash
+      - .bash_logout
+      - .bashrc
+    profile: &profile
+      - .profile
+    vim:
+      - .vimrc
+    fish:
+      - .config/fish/functions
+      - .config/fish/config.fish
+      - .config/fish/fishfile
+  packages:
+    - curl
+    - neofetch
+    - tmux
+    - dos2unix
+  shell: fish
+
+server:
+  files:
+    minimal:
+      - *bash
+      - *profile
+  shell: bash
